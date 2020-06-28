@@ -14,54 +14,12 @@ namespace AutomationPractice.Page
             Assert.AreEqual(expectedTitle, PageTitle.Text.ToLower());
         }
 
-        
-        public void AssertFirstNameIsRequired()
+        public void MessageWithMissingValue(string Message)
         {
 
-           string text =  ActualMessenger.Text;
-
-            string expectedMsg = "There is 1 error\r\nfirstname is required.";
-
-            Assert.AreEqual(text, expectedMsg);
+            Assert.IsTrue(this.ActualMessage.Text.Contains(Message), "The results DIV doesn't contains the specified text.");
         }
 
-        public void AssertLastNameIsRequired()
-        {
-
-            string text = ActualMessenger.Text;
-
-            string expectedMsg = "There is 1 error\r\nlastname is required.";
-
-            Assert.AreEqual(text, expectedMsg);
-        }
-
-        public void AssertPasswordIsRequired()
-        {
-
-            string text = ActualMessenger.Text;
-
-            string expectedMsg = "There is 1 error\r\npasswd is required.";
-
-            Assert.AreEqual(text, expectedMsg);
-        }
-        public void AssertCityIsRequired()
-        {
-
-            string text = ActualMessenger.Text;
-
-            string expectedMsg = "There is 1 error\r\ncity is required.";
-
-            Assert.AreEqual(text, expectedMsg);
-        }
-
-        public void AssertAddressIsRequired()
-        {
-
-            string text = ActualMessenger.Text;
-
-            string expectedMsg = "There is 1 error\r\naddress1 is required.";
-
-            Assert.AreEqual(text, expectedMsg);
-        }
+       
     }
 }

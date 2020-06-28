@@ -1,6 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
+
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Edge;
@@ -65,19 +64,7 @@ namespace AutomationPractice.Core
         return element;
     }
 
-    public List<WebElement> FindElements(By locator)
-    {
-        ReadOnlyCollection<IWebElement> nativeWebElements =
-            _webDriverWait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.PresenceOfAllElementsLocatedBy(locator));
-        var elements = new List<WebElement>();
-        foreach (var nativeWebElement in nativeWebElements)
-        {
-            WebElement element = new WebElement(_webDriver, nativeWebElement, locator);
-            elements.Add(element);
-        }
-
-        return elements;
-    }
+  
 
     public void Navigate(string url)
     {

@@ -23,6 +23,41 @@
 
         public string Phone { get; set; }
 
+   
+
+
+        public void SkipFirstName()
+        {
+            FirstName = string.Empty;
+            ErrorMessage = "firstname is required.";
+        }
+
+
+        public void SkipLastName()
+        {
+            LastName = string.Empty;
+            ErrorMessage = "lastname is required.";
+        }
+
+        public void SkipPassword()
+        {
+            Password = string.Empty;
+            ErrorMessage = "passwd is required.";
+        }
+
        
+
+        public void SkipAddress()
+        {
+            Address = string.Empty;
+            ErrorMessage = "address1 is required";
+        }
+
+        public void SkipCity()
+        {
+            City = string.Empty;
+            ErrorMessage = "city is required.";
+        }
+
     }
 }

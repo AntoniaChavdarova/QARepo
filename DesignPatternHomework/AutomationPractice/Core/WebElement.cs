@@ -1,11 +1,8 @@
 ﻿using OpenQA.Selenium;
 using OpenQA.Selenium.Support.UI;
 using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
+
 using System.Diagnostics;
-using System.Drawing;
-using System.Text;
 
 namespace AutomationPractice.Core
 {
@@ -39,26 +36,7 @@ namespace AutomationPractice.Core
 
      
 
-        public List<WebElement> FindElements(By by)
-        {
-            var wait = new WebDriverWait(WrappedDriver, TimeSpan.FromSeconds(20));
-            ReadOnlyCollection<IWebElement> nativeWebElements =
-                wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.PresenceOfAllElementsLocatedBy(by));
-            var elements = new List<WebElement>();
-            foreach (var nativeWebElement in nativeWebElements)
-            {
-                WebElement element = new WebElement(_webDriver, nativeWebElement, by);
-                elements.Add(element);
-            }
-
-            return elements;
-        }
-
-       
-
-     
-
-        public void Click()
+       public void Click()
         {
             WaitToBeClickable(By);
             _webElement?.Click();

@@ -22,7 +22,7 @@ namespace AutomationPractice.Page
         public WebElement PostCode => Driver.FindElement(By.CssSelector("#postcode"));
         public WebElement Phone => Driver.FindElement(By.CssSelector("#phone_mobile"));
         public WebElement Submit => Driver.FindElement(By.CssSelector("#submitAccount"));
-        public WebElement ActualMessenger => Driver.FindElement(By.CssSelector("#center_column > div"));
+        public WebElement ActualMessage => Driver.FindElement(By.CssSelector(".alert.alert-danger"));
 
 
 

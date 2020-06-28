@@ -44,65 +44,69 @@ namespace AutomationPractice.Tests.PractiseTestForm
         [Test]
         public void MessageDisplayed_When_FirstNameIsRequired()
         {
-           
 
-            _user.FirstName = string.Empty;
+
+            _user.SkipFirstName();
+
             _registrationForm.FillForm(_user);
 
-            _registrationForm.AssertFirstNameIsRequired();
+            _registrationForm.MessageWithMissingValue(_user.ErrorMessage);
 
-            
 
-           
+
         }
 
         [Test]
         public void MessageDisplayed_When_LastName_Is_Required()
         {
-          
 
-            _user.LastName = string.Empty;
+
+            _user.SkipLastName();
             _registrationForm.FillForm(_user);
 
-            _registrationForm.AssertLastNameIsRequired();
+            _registrationForm.MessageWithMissingValue(_user.ErrorMessage);
 
             }
 
         [Test]
         public void MessageDisplayed_When_Password_Is_Required()
         {
-           
 
-            _user.Password = string.Empty;
+
+            _user.SkipPassword();
+
             _registrationForm.FillForm(_user);
 
-            _registrationForm.AssertPasswordIsRequired();
+            _registrationForm.MessageWithMissingValue(_user.ErrorMessage);
 
         }
 
         [Test]
         public void MessageDisplayed_When_City_Is_Required()
         {
-           
 
-            _user.City = string.Empty;
+
+            _user.SkipCity();
+
             _registrationForm.FillForm(_user);
 
-            _registrationForm.AssertCityIsRequired();
+            _registrationForm.MessageWithMissingValue(_user.ErrorMessage);
 
         }
 
         [Test]
         public void MessageDisplayed_When_Address_Is_Required()
         {
-          
 
-           _user.Address = string.Empty;
+
+            _user.SkipAddress();
+
             _registrationForm.FillForm(_user);
 
-            _registrationForm.AssertAddressIsRequired();
+            _registrationForm.MessageWithMissingValue(_user.ErrorMessage);
 
         }
+      
 
         [TearDown]
         public void TearDown()
