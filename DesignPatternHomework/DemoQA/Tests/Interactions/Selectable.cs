@@ -9,6 +9,7 @@ using System.Linq;
 using DemoQA.Utilities.Extensions;
 using NUnit.Framework.Interfaces;
 using System.IO;
+using System;
 
 namespace DemoQA.Interactions
 {
@@ -26,6 +27,7 @@ namespace DemoQA.Interactions
         }
 
         [Test]
+      
         public void SelectItemColorChange_When_SelectItem([Range(0, 3)] int index)
         {
            
@@ -47,6 +49,8 @@ namespace DemoQA.Interactions
 
             Assert.IsTrue(_selectablePage.ListOFOptions.All(o => o.GetCssColor() == "rgba(0, 123, 255, 1)"));
         }
+
+       
 
         [TearDown]
         public void TearDown()

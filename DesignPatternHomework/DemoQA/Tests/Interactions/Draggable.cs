@@ -38,9 +38,9 @@ namespace DemoQA.Interactions
         public void ElementXIsSame_When_DragAndDropOnlyYDiagonally()
         {
             _draggablePage.AxisRestrictedTab.Click();
-
             var xBefore = _draggablePage.OnlyYBox.Location.X;
 
+            
             Builder.DragAndDropToOffset(_draggablePage.OnlyYBox.WrappedElement, 100, 100).Perform();
             var xAfter = _draggablePage.OnlyYBox.Location.X;
 

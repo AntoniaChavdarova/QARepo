@@ -39,9 +39,7 @@ namespace DemoQA.Core
 
         public string Text => _webElement?.Text;
 
-        public bool? Enabled => _webElement?.Enabled;
-
-        public bool? Displayed => _webElement?.Displayed;
+       
 
         public List<WebElement> FindElements(By by)
         {
@@ -64,7 +62,8 @@ namespace DemoQA.Core
 
         public void Click()
         {
-            WaitToBeClickable(By);
+             WaitToBeClickable(By);
+          
             _webElement?.Click();
         }
 
@@ -84,9 +83,14 @@ namespace DemoQA.Core
         }
 
         private void WaitToBeClickable(By by)
+
+
         {
-            var webDriverWait = new WebDriverWait(_webDriver, TimeSpan.FromSeconds(30));
-            webDriverWait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementToBeClickable(by));
+
+            
+                var webDriverWait = new WebDriverWait(_webDriver, TimeSpan.FromSeconds(60));
+                webDriverWait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementToBeClickable(by));
+            
         }
     }
 }

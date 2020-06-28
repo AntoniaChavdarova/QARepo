@@ -19,7 +19,7 @@ namespace DemoQA.Pages
 
         public WebElement ClassAfterAction => Driver.FindElement(By.Id("droppable"));  
 
-        public WebElement  NotAcceptable => Driver.FindElement(By.Id("notAcceptable"));
+      
 
         
 

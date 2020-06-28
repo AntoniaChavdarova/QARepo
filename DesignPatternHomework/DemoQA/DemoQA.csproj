@@ -20,9 +20,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Factories\" />
     <Folder Include="Screenshots\" />
-    <Folder Include="Tests\Forms\" />
   </ItemGroup>
 
 </Project>

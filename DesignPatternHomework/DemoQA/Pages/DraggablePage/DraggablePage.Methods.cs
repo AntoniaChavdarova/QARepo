@@ -15,11 +15,8 @@ namespace DemoQA.Pages
                 
         }
        
-
-        public void DragAndDropOnlyYDiagonally()
-        {
-           
-        }
+      
+      
 
         public override string Url => "http://www.demoqa.com/dragabble";
     }

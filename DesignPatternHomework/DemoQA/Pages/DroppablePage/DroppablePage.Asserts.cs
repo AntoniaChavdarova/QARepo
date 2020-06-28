@@ -10,10 +10,6 @@ namespace DemoQA.Pages
    public partial class DroppablePage
     {
 
-        //public void AssertContainsTheClass ( string expectedText , string realText )
-        //{
-        //    StringAssert.Contains(expectedText, ClassAfterAction.GetCssAtribute());
-        //}
 
     }
 }
